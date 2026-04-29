@@ -1,15 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(), react()],
+  plugins: [react()],
 
   // ─── Build Output ─────────────────────────────────────────────────────────
   build: {
-    outDir: 'dist',         // explicit: hosting platforms must serve from /dist
-    sourcemap: false,        // disable sourcemaps in production
+    outDir: 'dist',
+    sourcemap: false,
     chunkSizeWarningLimit: 1000,
   },
 
