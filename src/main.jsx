@@ -5,6 +5,7 @@ import axios from 'axios'
 import './index.css'
 import App from './App.jsx'
 import store from './Redux/store.js'
+import Navbar from './Components/Utilities/Navbar.jsx'
 
 // ── Global 401 interceptor ───────────────────────────────────────────────────
 // Temporarily disabled aggressive auto-logout so admins are not instantly booted
@@ -24,6 +25,7 @@ axios.interceptors.response.use(
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
+      <Navbar/>
       <App />
     </Provider>
   </StrictMode>,
