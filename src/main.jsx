@@ -25,7 +25,7 @@ axios.interceptors.response.use(
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <Navbar/>
+      {/* <Navbar/> */}
       <App />
     </Provider>
   </StrictMode>,
